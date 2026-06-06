@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  scroll-behavior: smooth;
+  background-color: #F7F6F2;
+  font-feature-settings: "cv01", "cv02", "cv03", "cv04", "salt", "ss01", "ss02";
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+[id] {
+  scroll-margin-top: 88px;
+}
+
+body {
+  overflow-x: hidden;
+  background: #F7F6F2;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F2F2F2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FFC2C6;
+  border-radius: 10px;
+  border: 2px solid #F2F2F2;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #F3535E;
+}
+
+/* Selection color */
+::selection {
+  background-color: #FFC2C6;
+  color: #20201D;
+}
+
+/* Custom focus styles */
+*:focus-visible {
+  outline: 2px solid #FFC2C6;
+  outline-offset: 2px;
+}
+
+/* Smooth transitions */
+a, button {
+  transition: all 0.2s ease;
+}
+
+/* Text styling */
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+.tracking-tight {
+  letter-spacing: 0 !important;
+}
+
+/* Add subtle box shadow to cards */
+.card-shadow {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Page transitions */
+.page-transition-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-transition-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.4s, transform 0.4s;
+}
+
+.page-transition-exit {
+  opacity: 1;
+}
+
+.page-transition-exit-active {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Section styles */
+.section {
+  @apply py-20 md:py-28 px-4;
+}
+
+.section-white {
+  @apply bg-surface text-text-dark;
+}
+
+.section-canvas {
+  @apply bg-background-primary text-text-dark;
+}
+
+.section-dark {
+  @apply bg-background-secondary text-text-light;
+}
+
+.section-accent {
+  @apply bg-background-accent text-text-dark;
+}
+
+/* Heading styles */
+.heading-xl {
+  @apply text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-tight tracking-tight;
+}
+
+.heading-lg {
+  @apply text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-tight;
+}
+
+.heading-md {
+  @apply text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight;
+}
+
+.heading-sm {
+  @apply text-2xl sm:text-3xl font-bold leading-tight tracking-tight;
+}
+
+/* Underline animation */
+.hover-underline {
+  position: relative;
+}
+
+.hover-underline::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+
+.hover-underline:hover::after {
+  width: 100%;
+}
+
+/* Container with max width */
+.container-custom {
+  @apply container mx-auto max-w-6xl px-4 md:px-6;
+}
